@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+       
+    <h:head>
+        <title>Agenda Web JSF</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:dataTable var="_contacto" value="#{contactoListBean.instance.lista}"
+                         emptyMessage="No hay resultados.!">
+                <p:column headerText="Id">
+                    <h:outputText value="#{_contacto.id}" />
+                </p:column>
+
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{_contacto.nombre}" />
+                </p:column>
+
+                <p:column headerText="Apellido">
+                    <h:outputText value="#{_contacto.apellido}" />
+                </p:column>
+
+                <p:column headerText="Telefono">
+                    <h:outputText value="#{_contacto.telefono}" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
