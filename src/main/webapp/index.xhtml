@@ -8,9 +8,15 @@
     <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
     <h:head>
         <title>Agenda Web JSF</title>
+        <style type="text/css">
+            h1 { text-align: center}
+            
+        </style>
     </h:head>
     <h:body>
         <h1>Agenda Web JSF</h1>
+        <p:commandButton action="contactoEdit"
+			value="Nuevo" />
         <h:form>
             <p:dataTable var="_contacto" value="#{contactoListBean.instance.lista}"
                          emptyMessage="No hay resultados.!">
@@ -26,14 +32,14 @@
                 <p:column headerText="Telefono">
                     <h:outputText value="#{_contacto.telefono}" />
                 </p:column>
-                
+
                 <p:column headerText="Opciones">
-                    <p:commandButton id="detalle" value="Consultar" action="contacto">
+                    <p:commandButton id="detalle" value="Consultar" styleClass="cross" action="contacto">
                         <f:setPropertyActionListener value="#{_contacto}" target="#{contactoBean.instance}" />
                     </p:commandButton>
                 </p:column>
             </p:dataTable>
-            
+
         </h:form>
     </h:body>
 </html>
