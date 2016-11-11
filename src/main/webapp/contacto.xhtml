@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Agenda Web JSF</title>
+        <link rel="icon" type="image/png" href="/resources/img/icon.png" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panelGrid columns="2">
+                <f:facet name="header">
+                    Contacto
+                </f:facet>
+
+                <h:outputText value="Nombre:" />
+                <h:outputText value="#{contactoBean.instance.nombre}" />
+
+                <h:outputText value="Apellido:" />
+                <h:outputText value="#{contactoBean.instance.apellido}" />
+
+                <h:outputText value="Alias:" />
+                <h:outputText value="#{contactoBean.instance.alias}" />
+
+
+                <h:outputText value="Telefono:" />
+                <h:outputText value="#{contactoBean.instance.telefono}" />
+
+                <h:outputText value="Direccion:" />
+                <h:outputText value="#{contactoBean.instance.direccion}" />
+
+            </p:panelGrid>
+        </h:form>
+
+        <h:panelGrid columns="1" >
+            <p:commandButton  value="Retornar" onclick="history.back()"/>
+        </h:panelGrid>
+    </h:body>
+</html>
+
+
