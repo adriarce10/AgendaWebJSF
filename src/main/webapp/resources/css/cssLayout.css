@@ -14,6 +14,20 @@
     margin: 10px 0px 0px 0px;
 }
 
+.buttons input {
+    margin: 5px;
+    padding: 5px 5px 5px 20px; /* 20px makes room for your background image */
+    border: 1px solid #aaa;
+}
+
+.buttons .apply {
+    background: #eee url(path/to/apply.png) no-repeat 0 50%;
+} 
+
+.buttons .cross {
+    background: #eee url(path/to/cross.png) no-repeat 0 50%;
+} 
+
 #left {
     float: left;
     background-color: #ece3a5;
